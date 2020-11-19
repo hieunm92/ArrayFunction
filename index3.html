@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển kí tự thường sang kí tự in hoa</title>
+</head>
+<body>
+<script>
+    let value = prompt('Nhap trang thai: ');
+    let UPPER = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    let LOWER = 'abcdefghijklmnopqrstuvwxyz';
+    let result = []
+    for (let i = 0; i < value.length; i++){
+        if(UPPER.indexOf(value[i]) !== -1){
+            result.push(value[i].toLowerCase());
+        }else if (LOWER.indexOf(value[i]) !== -1){
+            result.push(value[i].toUpperCase());
+        }
+        else {
+            result.push(value[i]);
+        }
+    }
+    document.write(result.join(''));
+
+</script>
+
+</body>
+</html>
